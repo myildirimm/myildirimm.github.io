@@ -1,51 +1,33 @@
-## Developer Portfolio Landing Page Template
+# Mustafa Yıldırım — Academic Website
 
-### Introduction
+A responsive, accessible static academic portfolio inspired by the sidebar-led structure of `ihavoutis.github.io` and adapted to Mustafa Yıldırım's research profile.
 
-Use this template if you need a quick developer / data science portfolio! Based on a Minimal Jekyll theme for GitHub Pages.
+## Contents
 
-<img src="images/demo.gif?raw=true"/>
+- `index.html` — page content and metadata
+- `styles.css` — complete responsive design
+- `script.js` — mobile navigation, section highlighting, and subtle reveal motion
+- `assets/mustafa-yildirim.png` — profile portrait
+- `assets/academic-mark.svg` — custom academic monogram / favicon
 
-### Installation
+There is no build step or dependency manager. Open `index.html` directly or serve the folder with any static web server.
 
-See full step by step tutorial [on Medium](https://medium.com/@evanca/set-up-your-portfolio-website-in-less-than-10-minutes-with-github-pages-d0efa8ff56fd).
-___
+## Publish with GitHub Pages
 
-You can use the editor on GitHub to maintain and preview the content for your website in Markdown files.
+1. Create a public repository named `myildirimm.github.io` under the `myildirimm` GitHub account.
+2. Upload the contents of this folder to the repository root.
+3. In **Settings → Pages**, choose **Deploy from a branch**, then select `main` and `/ (root)`.
+4. The site will be available at `https://myildirimm.github.io/` after GitHub finishes publishing.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+If that repository name is already used, publish from another repository and select GitHub Pages in the same way; the URL will include the repository name.
 
-### Markdown
+## Common edits
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+- Replace the portrait while keeping the filename `assets/mustafa-yildirim.png`.
+- Update publication entries inside the `#publications` section of `index.html`.
+- Change the palette through the CSS variables at the top of `styles.css`.
+- Update the “Last updated” text in the sidebar when content changes.
 
-```markdown
-Syntax highlighted code block
+## Privacy
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Roadmap
-
-See the [open issues](https://github.com/evanca/quick-portfolio/issues) for a list of proposed features (and known issues).
-___
-
-### References
-
-[1] Jekyll theme "Minimal" for GitHub Pages: https://github.com/pages-themes/minimal (CC0 1.0 Universal License)
-<br>[2] Dummy photo via: https://pixabay.com/photos/man-male-adult-person-caucasian-1209494/ (Pixabay License)
-<br>[3] Dummy thumbnail image created by rawpixel.com: https://www.freepik.com/free-vector/set-elements-infographic_2807573.htm (Standard Freepik License)
+The public page includes the institutional email and public academic profiles. It intentionally omits private address and telephone details.

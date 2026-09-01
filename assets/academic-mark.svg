@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="title desc">
+  <title id="title">Academic monogram</title>
+  <desc id="desc">A circular monogram combining the initials IUC with an autonomous vehicle trajectory.</desc>
+  <circle cx="60" cy="60" r="54" fill="none" stroke="#ffffff" stroke-opacity=".75" stroke-width="1.5"/>
+  <circle cx="60" cy="60" r="46" fill="none" stroke="#3bc4c2" stroke-opacity=".65" stroke-width="1" stroke-dasharray="2 4"/>
+  <path d="M25 78c18-14 27-14 39-23 11-8 19-20 31-30" fill="none" stroke="#3bc4c2" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="25" cy="78" r="3.5" fill="#3bc4c2"/>
+  <circle cx="64" cy="55" r="3.5" fill="#ffffff"/>
+  <circle cx="95" cy="25" r="3.5" fill="#3bc4c2"/>
+  <text x="60" y="79" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="middle">İÜC</text>
+</svg>
