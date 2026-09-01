@@ -28,6 +28,3 @@ If that repository name is already used, publish from another repository and sel
 - Change the palette through the CSS variables at the top of `styles.css`.
 - Update the “Last updated” text in the sidebar when content changes.
 
-## Privacy
-
-The public page includes the institutional email and public academic profiles. It intentionally omits private address and telephone details.
