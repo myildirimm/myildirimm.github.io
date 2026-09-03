@@ -8,23 +8,98 @@
   <meta property="og:title" content="Mustafa Yıldırım · Autonomous Systems & Control">
   <meta property="og:description" content="Academic portfolio, selected research, publications, projects, and teaching.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://myildirimm.github.io/">
+  <meta property="og:site_name" content="Mustafa Yıldırım · Academic Portfolio">
+  <meta property="og:image" content="https://myildirimm.github.io/assets/highd-style-merge-poster.png">
+  <meta property="og:image:width" content="1280">
+  <meta property="og:image:height" content="720">
+  <meta property="og:image:alt" content="Top-down autonomous highway-merge research simulation">
+  <meta name="twitter:card" content="summary_large_image">
   <title>Mustafa Yıldırım · Autonomous Systems &amp; Control</title>
 
-  <link rel="icon" href="assets/logo_tr_eng-a4-40.png" type="image/svg+xml">
+  <link rel="canonical" href="https://myildirimm.github.io/">
+  <link rel="icon" href="assets/logo_tr_eng-a4-40.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Newsreader:opsz,wght@6..72,500;6..72,600&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-</head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-J2PFTBE2DZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-J2PFTBE2DZ');
-</script>
+  <style>
+    /* Research-motion additions kept here so this HTML works with the current stylesheet. */
+    .project-motion,
+    .project-card-motion-preview {
+      position: relative;
+      overflow: hidden;
+      background: #082b3c;
+    }
+
+    .project-motion > video,
+    .project-card-motion-preview > video {
+      position: absolute;
+      inset: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .project-card-motion-preview {
+      aspect-ratio: 16 / 9;
+      margin: -27px -27px 24px;
+      border-bottom: 1px solid rgba(6, 53, 75, 0.14);
+    }
+
+    .motion-toggle {
+      position: absolute;
+      right: 14px;
+      bottom: 14px;
+      z-index: 2;
+      min-width: 68px;
+      padding: 8px 13px;
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.42);
+      border-radius: 999px;
+      background: rgba(3, 24, 40, 0.76);
+      font: 700 0.68rem/1 "DM Sans", sans-serif;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      cursor: pointer;
+      backdrop-filter: blur(8px);
+      transition: background 160ms ease, transform 160ms ease;
+    }
+
+    .motion-toggle:hover {
+      background: rgba(5, 52, 72, 0.94);
+      transform: translateY(-1px);
+    }
+
+    .motion-toggle:focus-visible {
+      outline: 3px solid #67eee0;
+      outline-offset: 3px;
+    }
+
+    @media (max-width: 660px) {
+      .project-card-motion-preview {
+        margin: -27px -27px 22px;
+      }
+
+      .motion-toggle {
+        right: 10px;
+        bottom: 10px;
+      }
+    }
+  </style>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J2PFTBE2DZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-J2PFTBE2DZ');
+  </script>
+</head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
@@ -77,7 +152,6 @@
         </div>
       </div>
     </aside>
-
     <main id="main-content" class="main-content">
       <section id="home" class="section hero-section" aria-labelledby="welcome-heading">
         <p class="eyebrow">Welcome.</p>
@@ -171,19 +245,25 @@
 
         <div class="project-grid">
           <article class="project-card project-card-featured">
-            <div class="project-visual visual-highway" aria-hidden="true">
-              <svg viewBox="0 0 640 330" role="img">
-                <path class="road" d="M-20 270C140 215 230 222 337 154S530 65 680 78"/>
-                <path class="lane" d="M-20 270C140 215 230 222 337 154S530 65 680 78"/>
-                <circle class="agent a1" cx="145" cy="224" r="10"/>
-                <circle class="agent a2" cx="335" cy="155" r="10"/>
-                <circle class="agent a3" cx="517" cy="88" r="10"/>
-              </svg>
+            <div class="project-visual visual-highway project-motion" data-motion>
+              <video
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                poster="assets/highd-style-merge-poster.webp"
+                aria-label="Top-down simulation of an autonomous vehicle performing an interactive highway merge"
+              >
+                <source src="assets/highd-style-merge-loop.mp4" type="video/mp4">
+                <img src="assets/highd-style-merge-loop.gif" alt="Top-down autonomous highway-merge simulation">
+              </video>
+              <button class="motion-toggle" type="button" data-motion-label="highway simulation" aria-label="Pause highway simulation">Pause</button>
             </div>
             <div class="project-copy">
               <p class="project-type">Research theme</p>
               <h3>Safe autonomous highway decision-making</h3>
-              <p>Learning, planning, and neuro-symbolic reasoning for interactive traffic, with safety and interpretability at the centre of evaluation.</p>
+              <p>Learning, planning, and neuro-symbolic reasoning for interactive traffic, with safety and interpretability at the centre of evaluation. The original top-down visualisation is inspired by HighD-style trajectory analysis; it is not recorded dataset footage.</p>
               <a href="https://doi.org/10.1177/03611981251357006" target="_blank" rel="noopener">Related publication <span aria-hidden="true">↗</span></a>
             </div>
           </article>
@@ -201,9 +281,21 @@
             </div>
           </article>
 
-          <article class="project-card">
-            <div class="project-icon" aria-hidden="true">
-              <svg viewBox="0 0 64 64"><path d="M8 39c7-1 11-6 14-13 4 6 7 9 10 10 3-1 6-4 10-10 3 7 7 12 14 13M32 36v17M24 53h16"/></svg>
+          <article class="project-card project-card-with-motion">
+            <div class="project-card-motion-preview" data-motion>
+              <video
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                poster="assets/glider-control-poster.webp"
+                aria-label="Autonomous glider circling inside a thermal updraft"
+              >
+                <source src="assets/glider-control-loop.mp4" type="video/mp4">
+                <img src="assets/glider-control-loop.gif" alt="Autonomous glider circling inside a thermal updraft">
+              </video>
+              <button class="motion-toggle" type="button" data-motion-label="glider simulation" aria-label="Pause glider simulation">Pause</button>
             </div>
             <p class="project-type">RL · Flight dynamics</p>
             <h3>Autonomous Thermal Soaring</h3>
@@ -392,7 +484,7 @@
         <div class="contact-card">
           <p class="section-kicker">Contact</p>
           <h2 id="contact-heading">Interested in autonomous systems, control, or collaborative research?</h2>
-          <p>I welcome conversations about research collaboration, student projects, and academic opportunities.</p>
+          <p>I welcome conversations about international research collaboration, student projects, and postdoctoral or visiting-researcher opportunities.</p>
           <a class="email-link" href="mailto:mustafa.yildirim@iuc.edu.tr">mustafa.yildirim@iuc.edu.tr <span aria-hidden="true">↗</span></a>
           <div class="contact-links">
             <a href="https://avesis.iuc.edu.tr/mustafa.yildirim" target="_blank" rel="noopener">Institutional profile</a>
@@ -411,5 +503,46 @@
   </div>
 
   <script src="script.js"></script>
+  <script>
+    (() => {
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      document.querySelectorAll("[data-motion]").forEach((container) => {
+        const video = container.querySelector("video");
+        const button = container.querySelector(".motion-toggle");
+        if (!video || !button) return;
+
+        const label = button.dataset.motionLabel || "animation";
+        const syncButton = () => {
+          const isPaused = video.paused;
+          button.textContent = isPaused ? "Play" : "Pause";
+          button.setAttribute("aria-label", `${isPaused ? "Play" : "Pause"} ${label}`);
+        };
+
+        if (reduceMotion) {
+          video.removeAttribute("autoplay");
+          video.pause();
+        }
+
+        button.addEventListener("click", async () => {
+          if (video.paused) {
+            try {
+              await video.play();
+            } catch (error) {
+              console.warn("The animation could not be started.", error);
+            }
+          } else {
+            video.pause();
+          }
+          syncButton();
+        });
+
+        video.addEventListener("play", syncButton);
+        video.addEventListener("pause", syncButton);
+        video.addEventListener("loadeddata", syncButton);
+        syncButton();
+      });
+    })();
+  </script>
 </body>
 </html>
